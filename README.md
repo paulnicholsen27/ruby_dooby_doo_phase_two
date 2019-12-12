@@ -72,7 +72,7 @@ Guests
 4. A user can **view all of the guests for a particular episode**. On the episode show page:
     - List all guests who were on that episode
 
-### Hints / Tips
+### Tips
 
 + Remember we want to be RESTful. Which URL should show info about a particular guest? Which URL should show a form to create an appearance? Which controller actions are associated?  
 + There are probably many ways to set this up.
