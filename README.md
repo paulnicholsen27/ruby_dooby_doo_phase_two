@@ -51,7 +51,7 @@ Guests
 - Episodes index
 - Guests index
 
-## Instructions / Deliverables
+## Instructions
 1. To log that a specific guest appeared on a certain episode, we'll need to store some additional data. **Make the necessary updates to the schema** so that:
     - Guest can appear on many episodes
     - Episode can have multiple guests
