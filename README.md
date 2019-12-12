@@ -46,7 +46,7 @@ Guests
 
 - None
 
-***Routes, Controllers and Views***
+### Routes, Controllers and Views
 
 - Episodes index
 - Guests index
