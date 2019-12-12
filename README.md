@@ -42,7 +42,7 @@ Guests
 | created_at  | DateTime  |
 | updated_at  | DateTime  |
 
-***Model Methods and Validations***
+### Model Methods and Validations
 
 - None
 
