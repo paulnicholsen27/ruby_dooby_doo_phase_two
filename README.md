@@ -1,18 +1,21 @@
-# Rails Assessment
+# Rails Code Challenge - Late Show
 
-It's time to put our Rails know-how to the test. Today, we have a basic new application.
+For this assessment, you'll be working with late night tv show domain.
 
-## Objectives
-+ MVC
-+ REST
-+ Request/Response Cycle
-+ Form/Form Helpers
-+ ActiveRecord
-+ Validations
+In this repo, there is a Rails application with some features built out. Your job is to extend this code to add the functionality described in the deliverables below.
+
+## Topics
+
+- MVC
+- REST
+- Request-Response Cycle
+- Forms and Form Helpers
+- ActiveRecord
+- Validations
 
 ## Setup
 
-Before you begin, fork and clone this repo, run `rake db:migrate` and `rake db:seed` to get started.
+Clone this repo. Then run `bundle install`, `rails db:migrate`, and `rails db:seed` to install dependencies and set up the database, and run `rails s` to start the server.
 
 ## The Domain
 
@@ -52,6 +55,7 @@ Guests
 - Guests index
 
 ## Instructions
+
 1. To log that a specific guest appeared on a certain episode, we'll need to store some additional data. **Make the necessary updates to the schema** so that:
     - Guest can appear on many episodes
     - Episode can have multiple guests
@@ -61,18 +65,18 @@ Guests
     - Choose an existing guest and episode, and add a rating
     - Are redirected to the selected episode's show page after successfully submitting the form
 
-![Form for relating an episode and a guest](form.gif)
+    ![Form for relating an episode and a guest](form.gif)
 
 3. On the guests index page, clicking on a guest's name takes the user to a **detail view about each guest**, which displays the:
     - Guest's name
     - Guest's occupation
 
-![Showing what happens when we click on a click on the Guest Index page](guest_index_to_show.gif)
+    ![Showing what happens when we click on a click on the Guest Index page](guest_index_to_show.gif)
 
 4. A user can **view all of the guests for a particular episode**. On the episode show page:
     - List all guests who were on that episode
 
 ### Tips
 
-+ Remember we want to be RESTful. Which URL should show info about a particular guest? Which URL should show a form to create an appearance? Which controller actions are associated?  
-+ There are probably many ways to set this up.
+- Remember we want to be RESTful. Which URL should show info about a particular guest? Which URL should show a form to create an appearance? Which controller actions are associated?
+- There are probably many ways to set this up.
