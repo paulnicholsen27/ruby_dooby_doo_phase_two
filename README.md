@@ -21,7 +21,9 @@ Clone this repo. Then run `bundle install`, `rails db:migrate`, and `rails db:se
 
 The application keeps track of the guests that have appeared on the show.
 
-There are three models in the domain, Guest, Episode, and Appearance.
+There are three models in the domain: Guest, Episode, and Appearance.
+
+Guests and Episodes have a many to many relationship through Appearances. A single Appearance belongs to one Guest and one Episode.
 
 ## What You Already Have
 
@@ -77,7 +79,7 @@ On the Guests index page, clicking on a guest's name should navigate to the show
 
 ### 2. Appearance Model
 
-To log that a specific guest appeared on a certain episode, we need to create the Appearance model. **Make the necessary updates to the schema and models** so that:
+To log that a specific Guest appeared on a certain Episode, we need to create the Appearance model. **Make the necessary updates to the schema and models** so that:
 
 - Guest can appear on many episodes
 - Episode can have multiple guests
@@ -96,15 +98,7 @@ After submitting the form, the user should be redirected to the selected episode
 
 ![Form for relating an episode and a guest](form.gif)
 
-### 4. Appearance Rating Validation
-
-The rating on an Appearance should be between 1 and 5.
-
-- Add a validation to ensure that this is the case.
-- Add handling for this error to the Appearance creation action.
-- The validation error should be shown on the Appearance creation form when a user attempts to save an appearance with an out of bounds rating.
-
-### 5. Episode Show Page
+### 4. Episode Show Page
 
 On the episode show page, a user should see:
 
@@ -112,9 +106,24 @@ On the episode show page, a user should see:
 - A list of the guests who were on that episode
 - Each guest's name should link to the Guest Show page
 
-### 6. Guest Episode links
+### 5. Guest Episode links
 
 On the guest show page, add a list of the episodes the guest has appeared on. Each episode date should link to the show page for that episode.
+
+### 6. Appearance Rating Validation
+
+The rating on an Appearance should be between 1 and 5.
+
+- Add a validation to ensure that this is the case.
+- Add handling for this error to the Appearance creation action.
+- The validation error should be shown on the Appearance creation form when a user attempts to save an appearance with an invalid rating.
+
+### 7. Additional Appearance Validation
+
+A Guest should only appear on a given Episode once.
+
+- Add a validation to Appearance to ensure that each Guest can only appear once on the same Episode.
+- If necessary, update the error handling on the Appearance creation form to show this validation error.
 
 ## Rubric
 
