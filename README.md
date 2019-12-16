@@ -21,7 +21,7 @@ Clone this repo. Then run `bundle install`, `rails db:migrate`, and `rails db:se
 
 The application keeps track of the guests that have appeared on the show.
 
-There are two models in the domain, Guest and Appearance.
+There are three models in the domain, Guest, Episode, and Appearance.
 
 ## What You Already Have
 
@@ -64,30 +64,57 @@ Update the code of the application to meet the following deliverables. Where app
 
 ***Read through these deliverables carefully to understand the requirements for this code challenge. Tackle them one by one, as they build on each other sequentially.***
 
-1. To log that a specific guest appeared on a certain episode, we'll need to store some additional data. **Make the necessary updates to the schema** so that:
-    - Guest can appear on many episodes
-    - Episode can have multiple guests
-    - Appearance stores guest's rating for an episode in range of 1 to 5
+### 1. Guest Show Page
 
-2. A user can fill out a form to **create a new appearance** where they:
-    - Choose an existing guest and episode, and add a rating
-    - Are redirected to the selected episode's show page after successfully submitting the form
+There should be a show page for each Guest. It should display the:
 
-    ![Form for relating an episode and a guest](form.gif)
+- Guest's name
+- Guest's occupation
 
-3. On the guests index page, clicking on a guest's name takes the user to a **detail view about each guest**, which displays the:
-    - Guest's name
-    - Guest's occupation
+On the Guests index page, clicking on a guest's name should navigate to the show page.
 
-    ![Showing what happens when we click on a click on the Guest Index page](guest_index_to_show.gif)
+![Showing what happens when we click on a click on the Guest Index page](guest_index_to_show.gif)
 
-4. A user can **view all of the guests for a particular episode**. On the episode show page:
-    - List all guests who were on that episode
+### 2. Appearance Model
 
-### Tips
+To log that a specific guest appeared on a certain episode, we need to create the Appearance model. **Make the necessary updates to the schema and models** so that:
 
-- Remember we want to be RESTful. Which URL should show info about a particular guest? Which URL should show a form to create an appearance? Which controller actions are associated?
-- There are probably many ways to set this up.
+- Guest can appear on many episodes
+- Episode can have multiple guests
+- Appearance stores a numeric rating
+
+### 3. New Appearance Form
+
+A user can fill out a form to create a new Appearance. They can:
+
+- Choose an existing guest from a select dropdown
+- Choose an existing episode from a select dropdown
+- Enter a numeric rating
+- Submit the form
+
+After submitting the form, the user should be redirected to the selected episode's show page.
+
+![Form for relating an episode and a guest](form.gif)
+
+### 4. Appearance Rating Validation
+
+The rating on an Appearance should be between 1 and 5.
+
+- Add a validation to ensure that this is the case.
+- Add handling for this error to the Appearance creation action.
+- The validation error should be shown on the Appearance creation form when a user attempts to save an appearance with an out of bounds rating.
+
+### 5. Episode Show Page
+
+On the episode show page, a user should see:
+
+- Episode date
+- A list of the guests who were on that episode
+- Each guest's name should link to the Guest Show page
+
+### 6. Guest Episode links
+
+On the guest show page, add a list of the episodes the guest has appeared on. Each episode date should link to the show page for that episode.
 
 ## Rubric
 
