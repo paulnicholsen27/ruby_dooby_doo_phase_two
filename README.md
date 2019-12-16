@@ -60,6 +60,10 @@ Guests
 
 ## Instructions
 
+Update the code of the application to meet the following deliverables. Where appropriate, follow RESTful naming conventions and the MVC pattern to divide responsibility.
+
+***Read through these deliverables carefully to understand the requirements for this code challenge. Tackle them one by one, as they build on each other sequentially.***
+
 1. To log that a specific guest appeared on a certain episode, we'll need to store some additional data. **Make the necessary updates to the schema** so that:
     - Guest can appear on many episodes
     - Episode can have multiple guests
