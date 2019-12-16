@@ -19,17 +19,21 @@ Clone this repo. Then run `bundle install`, `rails db:migrate`, and `rails db:se
 
 ## The Domain
 
-You've just been hired by 'The Late Show With Stephen Colbert' - congratulations! The production staff needs help keeping track of all of the guests that they've had on the show. To do this, we need to be able to keep track of each guest and all of their appearances on the show.
+The application keeps track of the guests that have appeared on the show.
 
-Luckily, another developer has already started the job. We have a model for guests and a model for episodes. Visiting `'/guests'` displays all of the guests, and visiting `'/episodes'` displays all of the episodes. We just don't have a way to associate an episode with a guest. Remember that guests can appear on the show many times, and an episode can (and usually does) have many guests.
+There are two models in the domain, Guest and Appearance.
 
 ## What You Already Have
+
+The starter code has migrations and models for the initial Guest and Episode models, and seed data for some Guests and Episodes. There are also routes controller actions, and views to support listing the guests and episodes.
+
+After running the setup instructions above, visiting `'/guests'` will display all of the guests, and visiting `'/episodes'` will display all of the episodes.
 
 ***Schema***
 
 Episodes
 
-| Column | Format|
+| Column | Type |
 | ------------- | ------------- |
 | date  | Date  |
 | number  | Integer  |
@@ -38,7 +42,7 @@ Episodes
 
 Guests
 
-| Column | Format|
+| Column | Type |
 | ------------- | ------------- |
 | name  | String  |
 | occupation  | String  |
