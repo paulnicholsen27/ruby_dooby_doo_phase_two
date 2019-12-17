@@ -27,7 +27,7 @@ Guests and Episodes have a many to many relationship through Appearances. A sing
 
 ## What You Already Have
 
-The starter code has migrations and models for the initial Guest and Episode models, and seed data for some Guests and Episodes. There are also routes controller actions, and views to support listing the guests and episodes.
+The starter code includes migrations, models, and seed data for Guests and Episodes. There are also routes, controller actions, and views to support listing the guests and episodes.
 
 After running the setup instructions above, visiting `'/guests'` will display all of the guests, and visiting `'/episodes'` will display all of the episodes.
 
