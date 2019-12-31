@@ -106,24 +106,39 @@ On the episode show page, a user should see:
 - A list of the guests who were on that episode
 - Each guest's name should link to the Guest Show page
 
-### 5. Guest Episode links
+### 5. Guest Show Page Episode links
 
-On the guest show page, add a list of the episodes the guest has appeared on. Each episode date should link to the show page for that episode.
+On the Guest show page, add a list of the Episodes the Guest has appeared on.
+
+For each Episode, show the:
+
+- date of the Episode
+- rating for the Appearance
+
+Each Episode date should link to the show page for that Episode.
 
 ### 6. Appearance Rating Validation
 
-The rating on an Appearance should be between 1 and 5.
+The rating on an Appearance should be between 1 and 5 (inclusive - `1` and `5` are okay).
 
-- Add a validation to ensure that this is the case.
-- Add handling for this error to the Appearance creation action.
+- Add a validation to ensure that the rating is between 1 and 5.
+- Add handling for this error to the Appearance create action.
 - The validation error should be shown on the Appearance creation form when a user attempts to save an appearance with an invalid rating.
 
-### 7. Additional Appearance Validation
+### 7. Advanced: Additional Appearance Validation
 
 A Guest should only appear on a given Episode once.
 
 - Add a validation to Appearance to ensure that each Guest can only appear once on the same Episode.
-- If necessary, update the error handling on the Appearance creation form to show this validation error.
+- Update the error handling on the Appearance creation form to show this validation error.
+
+### 8. Advanced: Episode Average Rating
+
+On the Episode show page, show the average rating of the Appearances for the episode.
+
+### 9. Advanced: Guest Show Page Appearance Ordering
+
+On the Guest show page, order the Episodes by the Appearance rating so that the highest rated shows first in the list.
 
 ## Rubric
 
