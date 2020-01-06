@@ -75,8 +75,6 @@ There should be a show page for each Guest. It should display the:
 
 On the Guests index page, clicking on a guest's name should navigate to the show page.
 
-![Showing what happens when we click on a click on the Guest Index page](guest_index_to_show.gif)
-
 ### 2. Appearance Model
 
 To log that a specific Guest appeared on a certain Episode, we need to create the Appearance model. **Make the necessary updates to the schema and models** so that:
@@ -95,8 +93,6 @@ A user can fill out a form to create a new Appearance. They can:
 - Submit the form
 
 After submitting the form, the user should be redirected to the selected episode's show page.
-
-![Form for relating an episode and a guest](form.gif)
 
 ### 4. Episode Show Page
 
@@ -139,6 +135,10 @@ On the Episode show page, show the average rating of the Appearances for the epi
 ### 9. Advanced: Guest Show Page Appearance Ordering
 
 On the Guest show page, order the Episodes by the Appearance rating so that the highest rated shows first in the list.
+
+### Feature Demo
+
+![screen capture of feature demo](late-show-features-demo.gif)
 
 ## Rubric
 
