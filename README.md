@@ -1,3 +1,15 @@
+## Set up Steps -- *Please Follow Carefully* and ask if you're not sure!
+
+1.  Fork and clone this repo.
+2.  Work on the project
+3.  Commit (frequently!) and push like normal.
+4.  In your github, click the "Pull Requests" tab
+5.  Click the "New Pull Request" button
+6.  Put your full name as the title of the Pull Request
+7.  Hit Submit
+8.  Relax!
+
+
 # Rails Code Challenge - Late Show
 
 For this assessment, you'll be working with Late Night TV show domain.
