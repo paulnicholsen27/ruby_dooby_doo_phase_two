@@ -1,2 +1,17 @@
-<h1>Appearances#new</h1>
-<p>Find me in app/views/appearances/new.html.erb</p>
+<h1>New Appearance</h1>
+
+<%= form_for @appearances do |f| %>
+    <div>
+        <%= f.label :episode_id, "Episode : " %>
+        <%= f.collection_select :episode_id, Episode.all, :id, :to_s %>
+    </div>
+    <div>
+        <%= f.label :guest_id, "Guest : " %>
+        <%= f.collection_select :guest_id, Guest.all, :id, :name %>
+    </div>
+    <div>
+        <%= f.label :rating, "Rating : " %>
+        <%= f.number_field :rating %>
+    </div>
+    <%= f.submit %>
+<% end %>
