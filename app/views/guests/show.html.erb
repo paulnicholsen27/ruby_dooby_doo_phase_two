@@ -9,7 +9,7 @@
 </h3>
 
 <ul>
-    <% @guest.appearances.order("rating desc").each do |appearance| %>
+    <% @appearances.each do |appearance| %>
         <li>
             <%= link_to appearance.episode.to_s + "", episode_path(appearance.episode.id) %> 
             - Rating : <%= appearance.rating %>
