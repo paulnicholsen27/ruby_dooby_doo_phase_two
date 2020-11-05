@@ -1,0 +1,19 @@
+<h1>Appearance#new</h1>
+<p>Find me in app/views/appearance/new.html.erb</p>
+
+<% if @appearance.errors.any? %>
+    
+    <% @appearance.errors.full_messages.each do |msg| %>
+        <h1><%= msg %></h1>
+    <% end %>
+<% end %>
+
+<%= form_for @appearance do |form| %>
+<%= form.label :guest %>
+<%= form.collection_select :guest_id, Guest.all, :id, :name %>
+<%= form.label :episode %>
+<%= form.collection_select :episode_id, Episode.all, :id, :date %>
+<%= form.label :rating %>
+<%= form.text_field :rating %>
+<%= form.submit %>
+<% end %>
