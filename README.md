@@ -80,7 +80,7 @@ Update the code of the application to meet the following deliverables. Follow RE
 
 
 
-### 1. Appearance Model
+<!-- ### 1. Appearance Model
 
 To log that a specific Guest appeared on a certain Episode, we need to create the Appearance model. **Make the necessary updates to the schema and models** so that:
 
@@ -104,7 +104,7 @@ After submitting the form, the user should be redirected to the selected episode
 On the episode show page, a user should see:
 
 - Episode date
-- A list of the guests who were on that episode
+- A list of the guests who were on that episode -->
 - Each guest's name should link to the Guest Show page
 
 ### 4. Guest Show Page Episode links
