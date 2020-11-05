@@ -1,0 +1,7 @@
+<h1>Guest</h1>
+<h2>Name: <%= @guest.name %></h2>
+<ul>
+<% @episode_list.each do |e| %>
+    <li><%= link_to "#{e[0]} - Rating: #{e[1]}", episode_path(Episode.find_by :date => e[0]) %></li>
+<% end %>
+</ul>
