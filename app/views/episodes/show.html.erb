@@ -1,0 +1,14 @@
+<h1>Episode Details</h1>
+
+<div>Episode Date: <%= @episode.date%> </div>
+
+<div>Episode Number: <%= @episode.number%></div>
+
+<h3>Guests appeared on episode: </h3>
+<ul> 
+<% @episode.guests.each do |guest|%>
+        <div><li><%=link_to guest.name, guest_path(guest.id) %></li></div>
+        <% end %>
+</ul>
+
+<%= link_to 'Go back to Episode Index', episodes_path%>
