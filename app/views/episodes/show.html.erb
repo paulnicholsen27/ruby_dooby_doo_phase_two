@@ -1,0 +1,16 @@
+<h1>Episode <%=@episode.id%></h1>
+
+<div><br>
+<h4>Program Details:</h4>
+    <ul>
+        <li>Date: <%= @episode.date %></li>
+        <li>Guests:</li>
+            <ul>
+                <div><li><%=link_to @episode.guests.pluck(:name).join(", "), guest_path(@episode.guests.ids)%></li></div>
+            </ul>
+    </ul>
+
+
+
+</div>
+
