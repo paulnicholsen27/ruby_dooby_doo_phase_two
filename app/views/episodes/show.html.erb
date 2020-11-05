@@ -1,0 +1,6 @@
+<%= @episode.date %>
+<ul>
+<% @episode.guests.each do |guest| %>
+    <li><%= link_to guest.name, guest_path(guest) %>
+<%end%>
+<div>average rating: <% @episode.appearances.average(:rating)%></div>
