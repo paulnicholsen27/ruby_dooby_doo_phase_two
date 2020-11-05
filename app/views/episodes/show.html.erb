@@ -1,0 +1,10 @@
+<h1>Episode Details</h1>
+
+<h3><%= @episode.date %></h3>
+
+    <h4> Guest who appeared on this episode: </h4>
+    <% @episode.guests.each do |guest| %>
+    <%= link_to guest.name, guest_path(guest) %><br>
+    <%end%>
+
+<%= link_to "Back to Episode index", episodes_path%>

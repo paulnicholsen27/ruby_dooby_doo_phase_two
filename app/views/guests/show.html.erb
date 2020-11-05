@@ -1,0 +1,15 @@
+<h1>Guest Details</h1>
+
+
+<h2>Guest name:</h2>
+<%= @guest.name%>
+
+<h4>Occupation:</h4>
+<%= @guest.occupation%><br>
+
+<h4>Date of Episode:</h4>
+<% @guest.episodes.each do |episode|%>
+<%= link_to episode.date, episode_path(episode) %><br>
+<%end%>
+
+<%= link_to "Guest index page", guests_path%>
