@@ -1,0 +1,19 @@
+<h1> Guest Details</h1>
+
+<h3> <%= @guest.name %></h3>
+
+<p>Episodes Appeared On </p>
+
+<ol>
+<% @guest.episodes.each do |episode|%>
+   <div><li>Episode Date:<%= link_to episode.date, episode_path(episode.id) %></li> </div>
+   
+<% end %>
+</ol>
+
+<%= link_to 'Back to All Guests', guests_path%>
+
+
+<!-- could get episodes numeric_rating in rails console 
+    by creating a guest variable and calling 
+    guest1.episodes.pluck(:numeric_rating)
