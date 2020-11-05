@@ -6,10 +6,11 @@
         <li>Date: <%= @episode.date %></li>
         <li>Guests:</li>
             <ul>
-                <div><li><%=link_to @episode.guests.pluck(:name).join(", "), guests_path%></li></div>
+                <div><li><%=link_to @episode.guests.pluck(:name).join(", "), guest_path(@episode.guests.each {|guest| guest.id})%></li></div>
             </ul>
-        
+    </ul>
 
-    <ul>
+
 
 </div>
+
