@@ -1,0 +1,12 @@
+<h1>Add Appearance</h1>
+<%= render partial: "shared/error_list", locals: {new_object: @new_app}%>
+
+<%= form_for @new_app do |f|%>
+    <%= f.label :guest_id %>
+    <%= f.select :guest_id, @guest_id %>
+    <%= f.label :episode_id %>
+    <%= f.select :episode_id, @episode_id %>
+    <%= f.label :rating%>
+    <%= f.select :rating, [1, 2, 3, 4, 5]%>
+    <%= f.submit 'Add Appearance'%>
+<% end %>

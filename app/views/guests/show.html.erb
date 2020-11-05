@@ -1,0 +1,11 @@
+<h1>Guest Show Page</h1>
+<ul>
+    <li><%= @guest.name %></li>
+    <li><%= @guest.occupation %></li>
+<% @episodes.each do |ep|%>
+    <%= ep.date %>
+    <%= ep.rating %>
+<% end %>
+</ul>
+
+<%= link_to 'Guest Index Page', guests_path%>
