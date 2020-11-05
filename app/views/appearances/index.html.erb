@@ -1,0 +1,6 @@
+<h1>TV Appearance Ratings</h1>
+<ul>
+<% @appearances.each do |appearance|%>
+<li><%= link_to appearance.rating, appearance_path(appearance.id)%></li>
+<% end %>
+</ul>

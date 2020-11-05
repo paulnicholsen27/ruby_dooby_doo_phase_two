@@ -1,0 +1,14 @@
+  <%= form_for @appearance do |f|%>
+    <%= f.label :rating%>
+    <%= f.select :rating, (0..5) %><br><br>
+    <%= f.label "Episode :"%>
+    <%=f.collection_select :episode_id, Episode.all, :id, :number %><br><br>
+     <%= f.label "Guest :"%><br><br>
+    <%=f.collection_select :guest_id, Guest.all, :id, :name %><br><br>
+    <%= f.submit %><br><br>
+    <%=link_to "Back to Episode Show Page", episode_show(episode.id)%>
+
+<% end %>
+
+
+
