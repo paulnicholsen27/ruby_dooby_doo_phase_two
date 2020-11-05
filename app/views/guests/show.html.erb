@@ -1,0 +1,18 @@
+<h2>Guest <%= @guest.name %></h2>
+
+<div>
+    <strong>Average rating</strong> : <%= @guest.rating %>
+</div>
+
+<h3>
+    <strong>Episodes : </strong>
+</h3>
+
+<ul>
+    <% @appearances.each do |appearance| %>
+        <li>
+            <%= link_to appearance.episode.to_s + "", episode_path(appearance.episode.id) %> 
+            - Rating : <%= appearance.rating %>
+        </li>
+    <% end %>
+</ul>
