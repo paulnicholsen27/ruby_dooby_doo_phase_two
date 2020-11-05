@@ -1,0 +1,15 @@
+<%= form_for @appearance do |f| %>
+    <% if @appearance.errors.any? %>
+        <% @appearance.errors.full_messages.each do |error| %>
+            <%= error %>
+        <%end%>
+    <%end%>
+<%= f.label :guest %>
+<%= f.collection_select :guest_id, Guest.all, :id, :name %>
+<%= f.label :episode%>
+<%= f.collection_select :episode_id, Episode.all, :id, :date %>
+<%= f.label :rating %>
+<%= f.number_field :rating%>
+<%= f.submit %>
+<% end %>
+<%=%>
