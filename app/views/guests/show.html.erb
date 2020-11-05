@@ -1,0 +1,21 @@
+<h1><%= @guest.name %>'s apearance details</h1>
+
+<h3> Episodes </h3>
+
+<% @guest.appearances.order(rating: :desc).each do |appear| %>
+
+<dl>
+<dt><h5>Date:</h5><dt>
+    <dd>
+    <%= link_to appear.episode.date, episode_path(appear.episode.id) %>
+    </dd>
+    <dt>
+    <h5>Rating:</h5>
+    </dt>
+    <dd>
+    <%= appear.rating %>
+
+    <dd>
+</dl>
+
+<% end %>
