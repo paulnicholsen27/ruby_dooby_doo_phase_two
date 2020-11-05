@@ -1,0 +1,14 @@
+
+<h1>Guest show page test</h1>
+
+This page is about <%=@guest.name%><br>
+
+What episode did she appear in? : # <%@guest.episodes.each do |episode|%>
+                                    <%=link_to episode.number, episode_path(episode.id)%>
+                                    <%end%><br>
+Episode air date : <%@guest.episodes.each do |episode|%>
+                   <%=episode.date%>
+                   <%end%><br>
+Episode rating : <%@guest.appearances.each do |appearance|%>
+                   <%=appearance.rating%>
+                   <%end%><br>

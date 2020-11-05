@@ -1,0 +1,11 @@
+<h1>Testing this show page</h1>
+
+Date of Episode: <%=@episode.date%><br>
+Guests on this Episode: <%@episode.guests.each do |guest|%>
+                        <%=link_to guest.name, guest_path(guest.id)%>
+                        <%end%><br>
+Average rating: <%@episode.appearances.each do |appearance|%>
+                <%=appearance.rating / @episode.appearances.count%>
+                <%end%><br>
+
+<%=link_to "Back to episode list", episodes_path%>
