@@ -1,0 +1,13 @@
+<h1><%=@guest.name%></h1>
+<h2><%=@guest.occupation%></h2>
+<%if @guest.episodes.any?%>
+      <%@guest.episodes.each do |episode|%><br>
+        <div>Episode: <%=episode.number%><br></div>
+        <div> Date: <%=link_to episode.date, episode_path(episode.id)%><br> </div>
+        <div> Ratings: <%episode.appearances.each do |episode|%> </div>
+           <%=episode.rating%><br>
+           </li>
+         <%end%>
+     <%end%>
+<%end%>
+         
