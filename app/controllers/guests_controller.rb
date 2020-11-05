@@ -1,7 +1,7 @@
 class GuestsController < ApplicationController
 
   def index
-    @guests = Guest.all
+    @guests = Guest.order_by_rating
   end
 
   def show

@@ -2,6 +2,6 @@
 
 <ul>
   <% @episodes.each do |episode| %>
-    <li><%= episode.to_s%></li>
+    <li><%= link_to episode.to_s, episode_path(episode)%></li>
   <% end %>
 </ul>
