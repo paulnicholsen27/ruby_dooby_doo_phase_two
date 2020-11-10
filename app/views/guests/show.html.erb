@@ -1,10 +1,15 @@
 <h1>Guest Show Page</h1>
+
 <ul>
     <li><%= @guest.name %></li>
     <li><%= @guest.occupation %></li>
-<% @episodes.each do |ep|%>
-    <%= ep.date %>
-    <%= ep.rating %>
+
+<% @guest.episodes.each do |ep|%>
+    <li><%=  ep.date%></li>
+ <% end %>
+
+<%  @guest.appearances.each do |app|%>
+    <li><%= app.rating%></li>
 <% end %>
 </ul>
 
