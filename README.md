@@ -103,8 +103,8 @@ After submitting the form, the user should be redirected to the selected episode
 
 On the episode show page, a user should see:
 
-- Episode date
-- A list of the guests who were on that episode
+- Episode date -->
+ A list of the guests who were on that episode
 - Each guest's name should link to the Guest Show page
 
 ### 4. Guest Show Page Episode links
